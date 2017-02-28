@@ -1,0 +1,32 @@
+{% extends 'templates/app.twig' %}
+{% block title %}Contact | {% endblock %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ base_url() }}/css/contact.css">
+{% endblock %}
+{% block style %}
+
+{% endblock %}
+{% block bodyTag %}id="blueGradient"{% endblock %}
+{% block content %}
+	<div id="hero">
+		<img src="{{base_url()}}/images/contactHero.png" alt="Contact Us">
+	</div>
+	<div id="pressKit">
+		<a href="#">
+			<div id="call">
+				<div id="callContainer">
+					<span>Download the press kit</span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 24 24">
+					    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+					</svg>
+				</div>
+			</div>
+		</a>
+		<div id="colors">
+			<h1>Colors</h1>
+			<div class="colorSwatch blue">
+
+			</div>
+		</div>
+	</div>
+{% endblock %}

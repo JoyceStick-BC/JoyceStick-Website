@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>{% block title %}{% endblock %}JoyceStick</title>
+		<link rel="stylesheet" type="text/css" href="{{ base_url() }}/css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<script src="https://use.typekit.net/wsq0lxr.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+		{% block head %}{% endblock %}
+		<link rel="icon" type="image/png" href="{{ base_url() }}/images/favicon.png" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<style>
+		{% block style %}{% endblock %}
+	</style>
+	<body {% block bodyTag %}{% endblock %}>
+		{% include 'templates/partials/navigation.twig' %}
+		{% include 'templates/partials/flash.twig' %}
+		{% block content %}{% endblock %}
+		<div class="clear"></div>
+		{% include 'templates/partials/footer.twig' %}
+		{% block script %}{% endblock %}
+	</body>
+</html>

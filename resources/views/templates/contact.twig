@@ -1,0 +1,45 @@
+{% extends 'templates/app.twig' %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ base_url() }}/css/contact.css">
+{% endblock %}
+{% block bodyTag %}id="blueGradient"{% endblock %}
+{% block content %}
+	<div id="modelling" class="teamSection">
+		<div id="hero">
+			<img src="{{base_url()}}/images/galleryHero.png" alt="Modeling Our Objects">
+		</div>
+		<div id="meetTheTeam" class="center"><h4>Meet The Team</h4></div>
+		<div class="teamMembers">
+			<div class="teamMember">
+				<div class="memberPhoto"><img src="{{base_url()}}/images/people/DSC06863.jpg" alt="Ben Piperno"></div>
+				<div class="memberName">Ben Piperno</div>
+			</div>
+			<div class="teamMember">
+				<div class="memberPhoto"><img src="{{base_url()}}/images/people/DSC06863.jpg" alt="Vinny Roca"></div>
+				<div class="memberName">Vinny Roca</div>
+			</div>
+			<div class="teamMember">
+				<div class="memberPhoto"><img src="{{base_url()}}/images/people/DSC06863.jpg" alt="Jan van Merkensteijn"></div>
+				<div class="memberName">Jan van Merkensteijn</div>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div id="sound" class="teamSection">
+		<div id="hero">
+			<img src="{{base_url()}}/images/soundHero.png" alt="Creating Our Sound">
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div id="dev" class="teamSection">
+		<div id="hero">
+			<img src="{{base_url()}}/images/devHero.png" alt="Coding Our Game">
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div id="text" class="teamSection">
+		<div id="hero">
+			<img src="{{base_url()}}/images/textHero.png" alt="Writing Our Narrative">
+		</div>
+	</div>
+{% endblock %}

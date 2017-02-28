@@ -1,0 +1,5 @@
+bootstrap/app.php
+vendor/*
+composer.lock
+composer.phar
+sftp-config.json

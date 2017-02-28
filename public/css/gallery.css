@@ -1,0 +1,50 @@
+body {
+
+}
+
+#nav a, #hero {
+	color: #00d1fb;
+}
+
+#hero {
+	text-align: center;
+}
+#hero img {
+	width:55vw;
+}
+#modelling #meetTheTeam	{
+	text-align: center;
+	margin-top: -100px;
+}
+#meetTheTeam h4 {
+	background-color: #00d1fb;
+	font-size: 34px;
+	text-transform: uppercase;
+	padding:10px 15px;
+	display: inline-block;
+}
+#modelling .teamMembers {
+	right: 0; left: 0;
+}
+.teamMember {
+	width: 100px;
+	text-align: center;
+	display: inline-block;
+	margin-right:30px;
+}
+.teamMember:last-child {
+	margin-right: 0px;
+}
+.memberPhoto img {
+	border-radius: 50%;
+	border:3px solid #00d1fb;
+	width: 100px;
+	height: 100px;
+}
+.memberName {
+	word-wrap: break-word;
+	color:white;
+	font-size:18px;
+	margin-top: 10px;
+	padding:0 10px;
+}

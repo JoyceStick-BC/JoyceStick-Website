@@ -1,0 +1,122 @@
+html, body {
+	padding:0; margin:0;
+	font-family: 'Montserrat', sans-serif;
+	overflow-x:hidden;
+	height: 100%;
+}
+#blueGradient {
+	background: #010935;
+	background: -moz-linear-gradient(top, #010935 0%, #000734 0%, #000208 100%);
+	background: -webkit-linear-gradient(top, #010935 0%,#000734 0%,#000208 100%);
+	background: linear-gradient(to bottom, #010935 0%,#000734 0%,#000208 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#010935', endColorstr='#000208',GradientType=0 );
+}
+a {color:inherit; text-decoration: none;}
+.clear {clear: both;}
+.center {margin:auto;}
+.fifty {width:50%;}
+.iB {display: inline-block;}
+.right {float: right;}
+.left {float: left;}
+#nav ul {
+	list-style: none;
+	text-align: center;
+	margin-top: 40px;
+	padding:0;
+}
+#nav li {
+	display: inline-block;
+}
+#nav a {
+	color: #1c98fb;
+	text-transform: uppercase;
+	margin-right: 25px;
+	font-size: 23px;
+}
+#nav a:last-child {
+	margin-right: 0px;
+}
+
+#footer {
+	margin-top: 250px;
+	width: 100vw;
+	background: #4e0500;
+	background: -moz-linear-gradient(top, #4e0500 0%, #290100 100%);
+	background: -webkit-linear-gradient(top, #4e0500 0%,#290100 100%);
+	background: linear-gradient(to bottom, #4e0500 0%,#290100 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e0500', endColorstr='#290100',GradientType=0 );
+	text-align: center;
+}
+#footer img {
+	width: 55vw;
+	height: auto;
+	margin-top: -10vw;
+}
+#footer h1 {
+	color: #bb1a2d;
+	text-transform: uppercase;
+	font-size: 80px;
+}
+#testimonials, #events {
+	width: 50vw; 
+	margin:auto;
+}
+#testimonial, #event {
+	width: 30%;
+	display: inline-block;
+	float:left;
+	margin-right: 4%;
+}
+#testimonial:last-child, #event:last-child {
+	margin-right: 0px;
+}
+#footer p {
+	font-family: "ltc-bodoni-175",serif;
+	color:white;
+	font-size: 35px;
+	line-height: 40px;
+}
+#events p {
+	font-size: 45px;
+}
+
+#footer #testimonials span, #footer #events span {
+	color: #bb1a2d;
+	font-size:30px;
+}
+
+#social {
+	margin-top:100px;
+	text-align: center;
+}
+
+#footer #social img {
+	height: 40px;
+	width: auto;
+}
+
+#footer #social ul {
+	list-style: none;
+	text-align: center;
+	margin-top: 40px;
+}
+#footer #social li {
+	display: inline-block;
+}
+#footer #social a {
+	margin-right: 40px;
+}
+#footer {
+	margin-right: 0px;
+}
+#bc {
+	text-align: center;
+}
+#bc img {
+	margin:auto;
+	width: 250px;
+	height: auto;
+	margin-top: 50px;
+	margin-bottom:100px;
+	opacity: 0.5;
+}

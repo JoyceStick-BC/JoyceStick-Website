@@ -1,0 +1,71 @@
+{% extends 'templates/app.twig' %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ base_url() }}/css/home.css">
+{% endblock %}
+{% block bodyTag %}id="blueGradient"{% endblock %}
+{% block content %}
+	<div id="logo">
+		<img src="{{ base_url() }}/images/hero.png" alt="Joycestick">
+	</div>
+	<div id="title">A NEW VIRTUAL REALITY<br>GAME OF ULYSSES</div>
+	<div id="action">
+		<span>A Boston College project is bringing Joyce's novel to VR</span>
+		<a href="{{path_for('gallery')}}"><div id="callToAction">
+			See the game
+		</div></a>
+	</div>
+	<div class="clear"></div>
+	<div id="video">
+		<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbostoncollegeenglish%2Fvideos%2Fvb.147442528659648%2F1179029898834234%2F%3Ftype%3D3&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+	</div>
+	<div id="content">
+		<div id="intro">
+			<div id="largeObject">
+				<div class="sketchfab-embed-wrapper">
+					<iframe src="https://sketchfab.com/models/8cc8a43d08f446baa4b25c9845d1872e/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+				</div>
+			</div>
+			<div class="text right">
+				<div class="dropCap"><img src="{{ base_url() }}/images/drop.png"></div>
+				oycestick is a project based at Boston College that is concerned with transforming the wonders of James Joyce’s Ulysses into a virtual reality experience. It works to recreate the immediacy of Joyce’s prose through its virtual spaces, starting with the interior of Joyce’s Martello Tower, and progressing into further scenes and objects taken from the novel.<br><br>Comprised of twenty-one members across disciplines and areas of study, it is a digital humanities venture concerned with collaboration across these different skill-sets. There are three discrete groups, each one equipped with storyboarders, developers, text members, sound experts, and 3D modelers working together to create scenes that are visually, aurally, and tactilely sophisticated and accurate to Joyce’s vision.
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="smallObjects">
+			<div id="smallObject">
+				<div class="sketchfab-embed-wrapper">
+					<iframe src="https://sketchfab.com/models/0f997d1e3aab42d6a10ad3e24b222180/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+				</div>
+			</div>
+			<div id="smallObject">
+				<div class="sketchfab-embed-wrapper">
+					<iframe src="https://sketchfab.com/models/25c869b9afbd4b31a1bec5e9bfa86fe6/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+				</div>
+			</div>
+			<div id="smallObject">
+				<div class="sketchfab-embed-wrapper">
+					<iframe src="https://sketchfab.com/models/3fccc03215f04e2dba6a215136102683/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="action">
+			<a href="#" class="actionAnchor"><div id="actionButton">See More Objects</div></a>
+		</div>
+	</div>
+{% endblock %}
+
+{% block script %}
+<script>
+	$( document ).ready(function() {
+		if ($(window).width() > 1130) {
+	    	$("#largeObject .sketchfab-embed-wrapper iframe").height($(".text").outerHeight());
+	   	}
+	});
+	$( window ).resize(function() {
+		if ($(window).width() > 1130) {
+			$("#largeObject .sketchfab-embed-wrapper iframe").height($(".text").outerHeight());
+		}
+	});
+</script>
+{% endblock %}
