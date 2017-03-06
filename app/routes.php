@@ -12,6 +12,10 @@ $app->get('/', 'HomeController:index')->setName('home');
 $app->get('/gallery', 'GalleryController:index')->setName('gallery');
 $app->get('/contact', 'ContactController:index')->setName('contact');
 
+$app->group('/blog', function() {
+	$this->get('/', 'BlogController:getBlog')->setName('blog');
+});
+
 $app->group('', function () {
     $this->get('/auth/signup', 'AuthController:getSignUp')->setName('auth.signup');
     $this->post('/auth/signup', 'AuthController:postSignUp');

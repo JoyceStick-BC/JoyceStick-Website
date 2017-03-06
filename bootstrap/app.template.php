@@ -82,6 +82,10 @@ $container['HomeController'] = function($container) {
 	return new \Carbon\Controllers\HomeController($container);
 };
 
+$container['BlogController'] = function($container) {
+	return new \Carbon\Controllers\BlogController($container);
+};
+
 $container['AuthController'] = function($container) {
 	return new \Carbon\Controllers\Auth\AuthController($container);
 };
