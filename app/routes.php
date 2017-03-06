@@ -13,7 +13,7 @@ $app->get('/gallery', 'GalleryController:index')->setName('gallery');
 $app->get('/contact', 'ContactController:index')->setName('contact');
 
 $app->group('/blog', function() {
-	$this->get('/', 'BlogController:getBlog')->setName('blog');
+	$this->get('', 'BlogController:getBlog')->setName('blog');
 });
 
 $app->group('', function () {
