@@ -8,7 +8,7 @@ $app->get('/home', function ($request, $response) {
 use Carbon\Middleware\AuthMiddleware;
 use Carbon\Middleware\GuestMiddleware;
 
-$app->get('/', 'HomeController:index')->setName('home');
+$app->get('/', 'HomeController:scrap')->setName('home');
 $app->get('/gallery', 'GalleryController:index')->setName('gallery');
 $app->get('/contact', 'ContactController:index')->setName('contact');
 

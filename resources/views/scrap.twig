@@ -5,9 +5,16 @@
 {% block bodyTag %}id="blueGradient"{% endblock %}
 {% block content %}
 	<div id="logo">
-		<img src="{{ base_url() }}/images/hero/seg1.png" alt="Joycestick" class="seg1">
-		<img src="{{ base_url() }}/images/hero/seg2.png" alt="Joycestick" class="seg2">
-		<img src="{{ base_url() }}/images/hero/seg3.png" alt="Joycestick" class="seg3">
+		<img src="{{ base_url() }}/images/hero/joycewords/1.png" alt="Joycestick" class="logo1" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/2.png" alt="Joycestick" class="logo2" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/3.png" alt="Joycestick" class="logo3" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/4.png" alt="Joycestick" class="logo4" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/5.png" alt="Joycestick" class="logo5" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/6.png" alt="Joycestick" class="logo6" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/7.png" alt="Joycestick" class="logo7" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/9.png" alt="Joycestick" class="logo9" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/10.png" alt="Joycestick" class="logo10" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/11.png" alt="Joycestick" class="logo11" draggable="false">
 	</div>
 	<div id="title">A NEW VIRTUAL REALITY<br>GAME OF ULYSSES</div>
 	<div id="action">
@@ -59,16 +66,40 @@
 
 {% block script %}
 <script>
+	
 	$( document ).ready(function() {
 		if ($(window).width() > 1130) {
 	    	$("#largeObject .sketchfab-embed-wrapper iframe").height($(".text").outerHeight());
 	   	}
-	   	$("#title, #action, #video, #content, #footer, #nav, .seg2, .seg3").hide();
+	   	$("#title, #action, #video, #content, #footer, .seg2, .seg3").css("opacity", "0");
+	   	$(".logo2, .logo3, .logo4, .logo5, .logo6, .logo7, .logo8, .logo9, .logo10, .logo11").hide();
+
+	   	$(".logo1").addClass("absoluteCenter");
+	   	console.log($(".logo1").css("margin-top"));
+	   	console.log((($(window).height()/2)-180)*-1);
+
+
+$(".logo1").animate(
+	{'marginTop' : "-="+(($(window).height()/2)-180)+"px"}, 
+	600, "swing", $(".logo2").animate(
+		{'marginTop' : "-="+(($(window).height()/2)-180)+"px", 'opacity' : 1}, 
+		600
+	)
+);
+
+	   	/*while(parseFloat($(".logo1").css("margin-top")) > (($(window).height()/2)-180)*-1) {
+	   		$(".logo1").css("margin-top", parseFloat($(".logo1").css("margin-top"))-1);
+	   		console.log($(".logo1").css("margin-top"));
+	   	}*/
+		//$("#logo img").css("margin-top", $("#logo img").height()/1.58*-1);
 	});
 	$( window ).resize(function() {
+		$("#logo img").css("margin-top", $("#logo img").height()/1.58*-1);
 		if ($(window).width() > 1130) {
 			$("#largeObject .sketchfab-embed-wrapper iframe").height($(".text").outerHeight());
 		}
 	});
+
+
 </script>
 {% endblock %}
