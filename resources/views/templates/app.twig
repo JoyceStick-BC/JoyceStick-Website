@@ -23,5 +23,11 @@
 		<div class="clear"></div>
 		{% include 'templates/partials/footer.twig' %}
 		{% block script %}{% endblock %}
+		<script>
+			$(document).ready(function(){
+				$("#leftGlasses").css("height", $("#imgfooter").height());
+				$("#rightGlasses").css("height", $("#imgfooter").height());
+			});
+		</script>
 	</body>
 </html>
