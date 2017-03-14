@@ -12,9 +12,12 @@
 		<img src="{{ base_url() }}/images/hero/joycewords/5.png" alt="Joycestick" class="logo5" draggable="false">
 		<img src="{{ base_url() }}/images/hero/joycewords/6.png" alt="Joycestick" class="logo6" draggable="false">
 		<img src="{{ base_url() }}/images/hero/joycewords/7.png" alt="Joycestick" class="logo7" draggable="false">
-		<img src="{{ base_url() }}/images/hero/joycewords/9.png" alt="Joycestick" class="logo9" draggable="false">
-		<img src="{{ base_url() }}/images/hero/joycewords/10.png" alt="Joycestick" class="logo10" draggable="false">
-		<img src="{{ base_url() }}/images/hero/joycewords/11.png" alt="Joycestick" class="logo11" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/9.png" alt="Joycestick" class="logo8" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/10.png" alt="Joycestick" class="logo9" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/11.png" alt="Joycestick" class="logo10" draggable="false">
+	</div>
+	<div id="glasses">
+		<img src="{{ base_url() }}/images/hero/joycewords/glasses.png" alt="Joycestick" class="glasses" draggable="false">
 	</div>
 	<div id="title">A NEW VIRTUAL REALITY<br>GAME OF ULYSSES</div>
 	<div id="action">
@@ -66,42 +69,51 @@
 
 {% block script %}
 <script>
+	//console.log($(window).height());
+	//console.log($(".logo1").position().top + $(".logo1").outerHeight(true));
+	//$(".logo2").css("margin-top", ($(window).height() - ($(".logo1").position().top + $(".logo1").outerHeight(true))));
 	$(document).ready(function() {
 		if ($(window).width() > 1130) {
 	    	$("#largeObject .sketchfab-embed-wrapper iframe").height($(".text").outerHeight());
 	   	}
-	   	$("#title, #action, #video, #content, #footer, .seg2, .seg3, #nav").css("opacity", "0");
-	   	$(".logo2, .logo3, .logo4, .logo5, .logo6, .logo7, .logo8, .logo9, .logo10, .logo11").show();
+	   	$(".logo2, .logo3, .logo4, .logo5, .logo6, .logo7, .logo8, .logo9, .logo10, .logo11").hide();
 
-	   	//$(".logo1").addClass("absoluteCenter").delay(1000);
-	   	console.log($(".logo1").css("margin-top"));
-	   	console.log((($(window).height()/2)-180)*-1);
-
-	   	
-
-	
-
-
-/*$(".logo1").animate(
-	{'marginTop' : "-="+(($(window).height()/2)-180)+"px"}, 
-	600, "swing", $(".logo2").animate(
-		{'marginTop' : "-="+(($(window).height()/2)-180)+"px", 'opacity' : 1}, 
-		600
-	)
-);*/
-
-	   	/*while(parseFloat($(".logo1").css("margin-top")) > (($(window).height()/2)-180)*-1) {
-	   		$(".logo1").css("margin-top", parseFloat($(".logo1").css("margin-top"))-1);
-	   		console.log($(".logo1").css("margin-top"));
-	   	}*/
-		//$("#logo img").css("margin-top", $("#logo img").height()/1.58*-1);
+	   	$(".logo2").css("margin-top", $(window).height()-($(".logo1").position().top + $(".logo1").outerHeight(true)));
 	});
 	function animateLogo() {
+		var n = 2;
+		var delaySpeed = 1000;
+    	var transitionSpeed = 1500;
 		$(".logo1").addClass("absoluteCenter").delay(100).queue(function(next){
-			$(this).removeClass("absoluteCenter").addClass("topPosition");
+			$(this).removeClass("absoluteCenter").addClass("topPosition").delay(000).queue(function delay_loop(next){
+				setTimeout(function() {
+					transitionSpeed = transitionSpeed/1.55;
+					$("#logo img").css("transition", "all ease-out " + transitionSpeed + "ms");
+					var previousLogo = $(".logo" + (n-1));
+					var currentLogo = $(".logo" + n);
+					var nextLogo = $(".logo" + (n+1));
+					var bottomLogoPosition = previousLogo.position().top + previousLogo.outerHeight(true);
+					var midspace = (($("#logo img").height()/1.58)) * -1;
+
+					currentLogo.show();
+					currentLogo.css("margin-top", midspace);
+					nextLogo.css("margin-top", $(window).height()-(previousLogo.position().top + previousLogo.outerHeight(true)));
+					n++;
+					console.log($("#logo img").css("transition"));
+					if (n < 11)
+           				delay_loop();
+           			else
+           				loadPage();
+				}, transitionSpeed*1.1);
+			});
 			next();
 		});
-	};
+	}
+	function loadPage() {
+		$("#title, #action, #video, #content, #footer, .seg2, .seg3, #nav").css("opacity", "1");
+		$('#glasses').css("margin-top", (($('.glasses').height()))*-1).css("opacity", "1");
+		$("body").css("overflow", "auto");
+	}
 	$( window ).resize(function() {
 		$("#logo img").css("margin-top", $("#logo img").height()/1.58*-1);
 		if ($(window).width() > 1130) {

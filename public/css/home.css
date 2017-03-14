@@ -127,6 +127,14 @@
 	text-align: center;
 	/*margin-top: 80px;*/
 }
+#glasses {
+	text-align: center;
+	position: relative;
+	z-index: 20;
+}
+#glasses img {
+	width:55vw;
+}
 #logo img {
 	width:55vw;
 }
@@ -134,11 +142,8 @@
 /*margin-top:120px;*/
 }
 #logo img {
-	-webkit-transition: all 2000ms ease-out;
--moz-transition: all 2000ms ease-out;
--ms-transition: all 2000ms ease-out;
--o-transition: all 2000ms ease-out;
-transition: all 2000ms ease-out;
+	position: relative;
+	transition: all 1000ms ease-out;
 }
 .logo1 {z-index: 10;}
 .logo2 {z-index: 9;}
@@ -151,6 +156,11 @@ transition: all 2000ms ease-out;
 .logo9 {z-index: 2;}
 .logo10 {z-index: 1;}
 .logo11 {z-index: 0;}
+
+#title, #action, #video, #content, #footer, .seg2, .seg3, #nav, #glasses {
+	opacity: 0;
+	transition: 1.2s ease opacity;
+}
 
 @media (max-width: 2275px) {
 	.text {
