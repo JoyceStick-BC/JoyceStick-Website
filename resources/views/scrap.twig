@@ -82,9 +82,9 @@
 	});
 	function animateLogo() {
 		var n = 2;
-		var delaySpeed = 1000;
-    	var transitionSpeed = 1500;
-		$(".logo1").addClass("absoluteCenter").delay(100).queue(function(next){
+		//var delaySpeed = 1000;
+    	var transitionSpeed = 1100;
+		$(".logo1").addClass("absoluteCenter").delay(0).queue(function(next){
 			$(this).removeClass("absoluteCenter").addClass("topPosition").delay(000).queue(function delay_loop(next){
 				setTimeout(function() {
 					transitionSpeed = transitionSpeed/1.55;
