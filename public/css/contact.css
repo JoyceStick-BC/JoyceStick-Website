@@ -20,16 +20,20 @@
 	font-size: 18px;
 	padding: 3.5px 7.5px;
 	cursor: pointer;
+	border: 1px solid transparent;
+	transition: 0.2s ease all;
+	outline: none;
 }
 #pressKit button:hover {
 	background-color: #010935;
 	color: #1c98fb;
+	border:1px solid #1c98fb;
 }
 
 #kitchen {
-	width: 265px;
+	width: 267px;
 	margin:auto;
-	margin-top:60px;
+	margin-top:20%;
 }
 
 #kitchen #press, #sociallinks {
