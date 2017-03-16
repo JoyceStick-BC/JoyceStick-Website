@@ -2,10 +2,22 @@
 {% block head %}
 <link rel="stylesheet" type="text/css" href="{{ base_url() }}/css/home.css">
 {% endblock %}
-{% block bodyTag %}id="blueGradient"{% endblock %}
+{% block bodyTag %}id="blueGradient" onload="animateLogo()"{% endblock %}
 {% block content %}
 	<div id="logo">
-		<img src="{{ base_url() }}/images/hero.png" alt="Joycestick">
+		<img src="{{ base_url() }}/images/hero/joycewords/1.png" alt="Joycestick" class="logo1 absoluteCenter" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/2.png" alt="Joycestick" class="logo2" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/3.png" alt="Joycestick" class="logo3" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/4.png" alt="Joycestick" class="logo4" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/5.png" alt="Joycestick" class="logo5" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/6.png" alt="Joycestick" class="logo6" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/7.png" alt="Joycestick" class="logo7" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/9.png" alt="Joycestick" class="logo8" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/10.png" alt="Joycestick" class="logo9" draggable="false">
+		<img src="{{ base_url() }}/images/hero/joycewords/11.png" alt="Joycestick" class="logo10" draggable="false">
+	</div>
+	<div id="glasses">
+		<img src="{{ base_url() }}/images/hero/joycewords/glasses.png" alt="Joycestick" class="glasses" draggable="false">
 	</div>
 	<div id="title">A NEW VIRTUAL REALITY<br>GAME OF ULYSSES</div>
 	<div id="action">
@@ -34,7 +46,7 @@
 		<div id="smallObjects">
 			<div id="smallObject">
 				<div class="sketchfab-embed-wrapper">
-					<iframe src="https://sketchfab.com/models/0f997d1e3aab42d6a10ad3e24b222180/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+					<iframe src="https://sketchfab.com/models/50e42ad9f1134703a967893f68518a98/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
 				</div>
 			</div>
 			<div id="smallObject">
@@ -57,15 +69,58 @@
 
 {% block script %}
 <script>
-	$( document ).ready(function() {
+	//console.log($(window).height());
+	//console.log($(".logo1").position().top + $(".logo1").outerHeight(true));
+	//$(".logo2").css("margin-top", ($(window).height() - ($(".logo1").position().top + $(".logo1").outerHeight(true))));
+	$(document).ready(function() {
 		if ($(window).width() > 1130) {
 	    	$("#largeObject .sketchfab-embed-wrapper iframe").height($(".text").outerHeight());
 	   	}
+	   	$(".logo2, .logo3, .logo4, .logo5, .logo6, .logo7, .logo8, .logo9, .logo10, .logo11").hide();
+
+	   	$(".logo2").css("margin-top", $(window).height()-($(".logo1").position().top + $(".logo1").outerHeight(true)));
 	});
+	function animateLogo() {
+		var n = 2;
+		//var delaySpeed = 1000;
+    	var transitionSpeed = 1100;
+		$(".logo1").addClass("absoluteCenter").delay(0).queue(function(next){
+			$(this).removeClass("absoluteCenter").addClass("topPosition").delay(000).queue(function delay_loop(next){
+				setTimeout(function() {
+					transitionSpeed = transitionSpeed/1.55;
+					$("#logo img").css("transition", "all ease-out " + transitionSpeed + "ms");
+					var previousLogo = $(".logo" + (n-1));
+					var currentLogo = $(".logo" + n);
+					var nextLogo = $(".logo" + (n+1));
+					var bottomLogoPosition = previousLogo.position().top + previousLogo.outerHeight(true);
+					var midspace = (($("#logo img").height()/1.58)) * -1;
+
+					currentLogo.show();
+					currentLogo.css("margin-top", midspace);
+					nextLogo.css("margin-top", $(window).height()-(previousLogo.position().top + previousLogo.outerHeight(true)));
+					n++;
+					console.log($("#logo img").css("transition"));
+					if (n < 11)
+           				delay_loop();
+           			else
+           				loadPage();
+				}, transitionSpeed*1.1);
+			});
+			next();
+		});
+	}
+	function loadPage() {
+		$("#title, #action, #video, #content, #footer, .seg2, .seg3, #nav").css("opacity", "1");
+		$('#glasses').css("margin-top", (($('.glasses').height()))*-1).css("opacity", "1");
+		$("body").css("overflow", "auto");
+	}
 	$( window ).resize(function() {
+		$("#logo img").css("margin-top", $("#logo img").height()/1.58*-1);
 		if ($(window).width() > 1130) {
 			$("#largeObject .sketchfab-embed-wrapper iframe").height($(".text").outerHeight());
 		}
 	});
+
+
 </script>
 {% endblock %}
