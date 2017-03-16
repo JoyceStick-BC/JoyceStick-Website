@@ -3,7 +3,6 @@ html, body {
 	font-family: 'Montserrat', sans-serif;
 	overflow-x:hidden;
 	height: 100%;
-	overflow: hidden;
 }
 #blueGradient {
 	background: #010935;
