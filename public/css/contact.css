@@ -1,50 +1,55 @@
+#centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 #hero {
 	text-align: center;
 	margin-top: 100px;
 }
 #hero img {
-	width: 55vw;
+	width: 50vw;
 }
-#pressKit {
-	width: 700px;
-	background: white;
-	border-radius: 2px;
-	min-height: 30px;
-	margin: auto;
-	margin-top:40px;
-	padding: 0 100px;
+#pressKit button {
+	background-color: #1c98fb;
+	border: none;
+	color: #010935;
+	font-weight: 700;
+	font-size: 18px;
+	padding: 3.5px 7.5px;
+	cursor: pointer;
 }
-#pressKit #call {
-	
-	text-align: center;
-	color:#6c6c6c;
-	transition: 0.3s ease all
-}
-#pressKit #call:hover {
-	background-color: #eee;
-}
-#pressKit #callContainer {
-	border-bottom:1px solid #eee;
-	width: 600px;
-	margin:auto;
-	padding:15px 0;
-}
-#pressKit #callContainer span, #pressKit #callContainer svg {
-	display: inline-block;
-}
-#pressKit #callContainer svg {
-	fill: #6c6c6c;
-}
-.colorSwatch {
-	border-radius: 50%;
-	width:50px;
-	height:50px;
-	margin:10px;
-}
-.blue {
-	background-color: rgb(45,140,167);
+#pressKit button:hover {
+	background-color: #010935;
+	color: #1c98fb;
 }
 
-.sketchfab-embed-wrapper iframe {
-	border-radius:2px;
+#kitchen {
+	width: 265px;
+	margin:auto;
+	margin-top:60px;
+}
+
+#kitchen #press, #sociallinks {
+	display: inline-block;
+	float:left;
+	margin: auto;
+}
+
+#kitchen #sociallinks ul {
+	margin: 0px;
+	margin-top: 3px;
+	padding: 0px;
+}
+
+#kitchen #sociallinks li {
+	position: relative;
+	display: inline-block;
+	margin-right: 20px;
+}
+
+#kitchen #sociallinks img {
+	height: 24px;
 }
