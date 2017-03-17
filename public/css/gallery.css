@@ -3,7 +3,7 @@ body {
 }
 
 #nav a, #hero {
-	color: #00d1fb;
+	color: #1c98fb;
 }
 
 #hero {
@@ -12,39 +12,83 @@ body {
 #hero img {
 	width:55vw;
 }
-#modelling #meetTheTeam	{
+#meetTheTeam {
 	text-align: center;
-	margin-top: -100px;
 }
 #meetTheTeam h4 {
-	background-color: #00d1fb;
+	background-color: #1c98fb;
 	font-size: 34px;
 	text-transform: uppercase;
 	padding:10px 15px;
 	display: inline-block;
 }
-#modelling .teamMembers {
-	right: 0; left: 0;
+.topMeetTeam{
+	margin-top:-130px;
+}
+.teamSection{
+	margin-bottom: 150px;
+	overflow: auto;
+}
+.teamMembers {
+	width: 55vw;
+	margin: auto;
+	margin-bottom: 25px;
+	overflow: auto;
+	clear: both;
 }
 .teamMember {
-	width: 100px;
-	text-align: center;
+	width: calc(25% - 35px);
+	margin-right: 35px;
 	display: inline-block;
-	margin-right:30px;
+	float: left;
+}
+.teamMember:first-child {
+	margin-left: 17.5px;
 }
 .teamMember:last-child {
 	margin-right: 0px;
 }
 .memberPhoto img {
-	border-radius: 50%;
-	border:3px solid #00d1fb;
-	width: 100px;
-	height: 100px;
+	width: 100%;
 }
 .memberName {
 	word-wrap: break-word;
-	color:white;
-	font-size:18px;
+	color: white;
+	font-size:20px;
 	margin-top: 10px;
-	padding:0 10px;
+	width: 100%;
+	text-align:center;
+}
+.memberLink{
+	margin-top: 10px;
+	color:#1c98fb;
+	font-size:16px;
+	text-align:center;
+}
+.teamDescription{
+	width: 60vw;
+	max-width: 1000px;
+	margin: auto;
+	color: white;
+	font-size: 22px;
+	line-height: 31px;
+	font-weight: 300;
+	padding-bottom: 25px;
+	font-family: 'Open Sans';
+	position: relative;
+}
+.drop{
+	font-family: "ltc-bodoni-175",serif;
+	color: white;
+	float: left;
+	font-size: 150px;
+	line-height: 60px;
+	display: inline-block;
+	margin-top: 38px;
+}
+.description{
+	width: calc(100% - 180px);
+	display: inline-block;
+	float:left;
+	padding-left: 20px;
 }
