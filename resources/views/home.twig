@@ -4,7 +4,7 @@
 {% endblock %}
 {% block bodyTag %}id="blueGradient" onload="animateLogo()"{% endblock %}
 {% block content %}
-	<div id="logo">
+	<!--<div id="logo">
 		<img src="{{ base_url() }}/images/hero/joycewords/1.png" alt="Joycestick" class="logo1 absoluteCenter" draggable="false">
 		<img src="{{ base_url() }}/images/hero/joycewords/2.png" alt="Joycestick" class="logo2" draggable="false">
 		<img src="{{ base_url() }}/images/hero/joycewords/3.png" alt="Joycestick" class="logo3" draggable="false">
@@ -18,8 +18,11 @@
 	</div>
 	<div id="glasses">
 		<img src="{{ base_url() }}/images/hero/joycewords/glasses.png" alt="Joycestick" class="glasses" draggable="false">
+	</div>-->
+	<div id="staticLogo">
+		<img src="{{ base_url() }}/images/hero/joyceStatic.png" alt="Joycestick">
 	</div>
-	<div id="title">A NEW VIRTUAL REALITY<br>GAME OF ULYSSES</div>
+	<div id="title">ULYSSES REIMAGINED</div>
 	<div id="action">
 		<span>A Boston College project is bringing Joyce's novel to VR</span>
 		<a href="{{path_for('gallery')}}"><div id="callToAction">
@@ -28,11 +31,30 @@
 	</div>
 	<div class="clear"></div>
 	<div id="video">
-		<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbostoncollegeenglish%2Fvideos%2Fvb.147442528659648%2F1179029898834234%2F%3Ftype%3D3&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/kwI70wGPlTw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 	</div>
 	<div id="content">
-		<div id="intro">
-			<div id="largeObject">
+		<div class="text">
+			<!--<div class="dropCap"><img src="{{ base_url() }}/images/drop.png"></div>-->
+			<!--Joycestick is a project based at Boston College that is concerned with transforming the wonders of James Joyce’s Ulysses into a virtual reality experience. It works to recreate the immediacy of Joyce’s prose through its virtual spaces, starting with the interior of Joyce’s Martello Tower, and progressing into further scenes and objects taken from the novel.<br><br>Comprised of twenty-one members across disciplines and areas of study, it is a digital humanities venture concerned with collaboration across these different skill-sets. There are three discrete groups, each one equipped with storyboarders, developers, text members, sound experts, and 3D modelers working together to create scenes that are visually, aurally, and tactilely sophisticated and accurate to Joyce’s vision.-->
+			There’s art imitating life, and then there’s art taking on a virtual life of its own. That’s what’s happening with a Boston College academic project involving the unlikely pairing of an immersive virtual reality 3D game, and the most important novel of the twentieth century, James Joyce’s, Ulysses. 
+			<br><br>
+			Called “Joycestick,” the project is bringing the book to life through “gamification” - users wear a virtual reality headset and headphones and walk around to explore in real space various scenes from the book. Joycestick tells the story by recreating scenes from Ulysses, all of which had to be re-created from research into the novel and the period. Subtitled “The Story of Ulysses in 100 Objects,” the various scenarios were researched, scaled and linked to the text; touching an object triggers a recorded narration from the book, along with other sounds, to explain its significance to the novel. Some objects transport the gamer to other worlds – to a recreation of Bloom’s house in 7 Eccles St., to Barney Kiernan’s pub, to the Martello Tower as it appeared in 1904.
+			<br><br>
+			“Instead of using virtual reality as just an extension of video games, we’re trying to use it as an entirely new medium of storytelling,” says one of the students, Ryan Reede, a computer science major. “There’s interactivity, there’s audio, there’s text, there’s music, there’s all these different elements to Joystick, but at the end of the day, it’s more of a new form of storytelling.” 
+			<br><br>
+			The project grew out of the Joyce and digital humanities classes of Boston College scholar Joseph Nugent, associate professor of the practice of English, who says Joycestick represents new ground for the teaching of literature.
+			<br><br>
+			“For me, Joycestick – and digital humanities – has entirely transformed my career, and led me to a whole area of creativity and possibility,” says Nugent, a native of Mullingar, Ireland. “As much as I love literature, my traditional training hadn’t offered me the kind of fulfillment that comes from the kind of cutting-edge research technology has made possible.”
+		</div>
+		<div id="object">
+			<h1>Sneak Peek</h1>
+			<div class="sketchfab-embed-wrapper">
+				<iframe src="https://sketchfab.com/models/37e588c8fa504286a58953f73a3cbb2c/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+			</div>
+		</div>
+		<!--<div id="intro">
+			</div id="largeObject">
 				<div class="sketchfab-embed-wrapper">
 					<iframe src="https://sketchfab.com/models/116149f0407147f9bc28daaf1ec478b2/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
 				</div>
@@ -42,8 +64,8 @@
 				oycestick is a project based at Boston College that is concerned with transforming the wonders of James Joyce’s Ulysses into a virtual reality experience. It works to recreate the immediacy of Joyce’s prose through its virtual spaces, starting with the interior of Joyce’s Martello Tower, and progressing into further scenes and objects taken from the novel.<br><br>Comprised of twenty-one members across disciplines and areas of study, it is a digital humanities venture concerned with collaboration across these different skill-sets. There are three discrete groups, each one equipped with storyboarders, developers, text members, sound experts, and 3D modelers working together to create scenes that are visually, aurally, and tactilely sophisticated and accurate to Joyce’s vision.
 			</div>
 		</div>
-		<div class="clear"></div>
-		<div id="smallObjects">
+		<div class="clear"></div>-->
+		<!--<div id="smallObjects">
 			<div id="smallObject">
 				<div class="sketchfab-embed-wrapper">
 					<iframe src="https://sketchfab.com/models/3c3f5bfb98284924a70cf410ab532bc9/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
@@ -59,11 +81,11 @@
 					<iframe src="https://sketchfab.com/models/41d025f5acb2459198fa4254c7491fb8/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
 				</div>
 			</div>
-		</div>
+		</div>-->
 		<div class="clear"></div>
-		<div id="action">
+		<!--<div id="action">
 			<a href="{{path_for('gallery')}}" class="actionAnchor"><div id="actionButton">See More</div></a>
-		</div>
+		</div>-->
 	</div>
 {% endblock %}
 
@@ -72,7 +94,7 @@
 	//console.log($(window).height());
 	//console.log($(".logo1").position().top + $(".logo1").outerHeight(true));
 	//$(".logo2").css("margin-top", ($(window).height() - ($(".logo1").position().top + $(".logo1").outerHeight(true))));
-	$(document).ready(function() {
+	/*$(document).ready(function() {
 		if ($(window).width() > 1130) {
 	    	$("#largeObject .sketchfab-embed-wrapper iframe").height($(".text").outerHeight());
 	   	}
@@ -119,8 +141,8 @@
 		if ($(window).width() > 1130) {
 			$("#largeObject .sketchfab-embed-wrapper iframe").height($(".text").outerHeight());
 		}
-	});
+	});*/
 
-
+	console.error("E4095: Failed state change. Stale cache from 1495897191.");
 </script>
 {% endblock %}

@@ -1,63 +1,109 @@
-body {
-	overflow: hidden;
+#callToAction,#title {
+    text-transform: uppercase
 }
+
 #title {
-	color:#1c98fb;
-	text-align: center;
-	font-size: 70px;
-	text-transform: uppercase;
-	margin-top: 40px;
-	font-weight: 600;
-	line-height: 78px;
+    text-align: center;
+    margin-top: 40px;
+    font-weight: 600;
+    line-height: 78px;
+    color: #1c98fb;
+    font-size: 70px
 }
+
 #callToAction {
-	display: inline-block;
-	background-color:#1c98fb;
-	color: #010935;
-	text-transform: uppercase;
-	padding: 15px 20px;
-	font-size: 25px;
-	transition: 0.2s ease all;
-	border:2px solid #1c98fb;
+    display: inline-block;
+    background-color: #1c98fb;
+    color: #010935;
+    padding: 15px 20px;
+    font-size: 25px;
+    transition: .2s ease all;
+    border: 2px solid #1c98fb
 }
+
+#action,#video {
+    text-align: center
+}
+
 #action {
-	width: 55vw;
-	margin:auto;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	text-align: center
+    margin: 20px auto;
+    width: 55vw
 }
+
 #action span {
-	display:inline-block;
-	color:#1c98fb;
-	text-transform: uppercase;
-	font-size: 1.4375em; /* 23px / 16px */
-	padding-top: 16px;
-	margin-right: 20px;
+    display: inline-block;
+    color: #1c98fb;
+    text-transform: uppercase;
+    font-size: 1.4375em;
+    padding-top: 16px;
+    margin-right: 20px
 }
-#callToAction:hover {
-	border:2px solid #1c98fb;
-	background-color: #010935;
-	color: #1c98fb;
+
+#actionButton:hover,#callToAction:hover {
+    border: 2px solid #1c98fb;
+    background-color: #010935;
+    color: #1c98fb
 }
+
 #video {
-	width: 100vw;
-	margin-top:30px;
-	text-align: center;
-	margin-bottom: 30px;
+    width: 100vw;
+    margin-top: 30px;
+    margin-bottom: 30px
 }
+
 #video iframe {
-	width:55vw;
-	height: 31vw;
+    width: 55vw;
+    height: 31vw
 }
+
 #content {
-	width: 55vw;
-	margin:auto;
+    width: 55vw;
+    margin: auto
 }
+
 #intro {
-	padding:30px 0;
-	min-height: 10px;
+    padding: 30px 0;
+    min-height: 10px
 }
+
+.text {
+    color: #fff;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 33px;
+    padding: 30px 60px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    letter-spacing: .5px
+}
+
+.actionAnchor {
+    text-align: center
+}
+
+#actionButton {
+    background-color: #1c98fb;
+    color: #010935;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    font-size: 25px;
+    transition: .2s ease all;
+    border: 2px solid #1c98fb;
+    display: inline-block;
+    margin: 30px 0 60px
+}
+
+#logo,#staticLogo {
+    text-align: center;
+    margin-top: 60px
+}
+
+#logo img,#staticLogo img {
+    width: 55vw
+}
+/*
 #largeObject {
 	display: table-cell;
 	float: left;
@@ -65,7 +111,8 @@ body {
 }
 #largeObject .sketchfab-embed-wrapper iframe {
 	width:100%;
-}
+}*/
+/*
 .text {
 	display: table-cell;
 	color:#010935;
@@ -91,7 +138,8 @@ body {
 }
 .text span {
 	float: left;
-}
+}*/
+/*
 #smallObjects {
 	width: 100%;
 }
@@ -106,44 +154,18 @@ body {
 	width:90%;
 	height:450px;
 	margin: auto
-}
-.actionAnchor {
-	text-align: center;
-}
-#actionButton {
-	background-color:#1c98fb;
-	color: #010935;
-	text-transform: uppercase;
-	padding: 15px 20px;
-	font-size: 25px;
-	transition: 0.2s ease all;
-	border:2px solid #1c98fb;
-	display: inline-block;
-	margin: 30px 0 60px 0;
-}
-#actionButton:hover {
-	border:2px solid #1c98fb;
-	background-color: #010935;
-	color: #1c98fb;
-}
-#logo {
-	text-align: center;
-	/*margin-top: 80px;*/
-}
-#glasses {
-	display: none;
+}*/
+/*#glasses {
 	text-align: center;
 	position: relative;
 	z-index: 20;
 }
 #glasses img {
 	width:55vw;
-}
-#logo img {
-	width:55vw;
-}
+}*/
+/*
 #logo {
-/*margin-top:120px;*/
+margin-top:120px;
 }
 #logo img {
 	position: relative;
@@ -165,9 +187,15 @@ body {
 	opacity: 0;
 	transition: 1.2s ease opacity;
 }
+*/
+
+.sketchfab-embed-wrapper iframe {
+	width: 55vw;
+    height: 31vw
+}
 
 @media (max-width: 2275px) {
-	.text {
+	.stext {
 		font-size: 16px;
 		line-height: 25px;
 		padding:20px 20px;
@@ -212,7 +240,7 @@ body {
 		padding-top:0px;
 		padding-bottom:10px;
 	}
-	.text {
+	.stext {
 		font-size: 16px;
 		line-height: 20px;
 		padding:10px;
@@ -237,7 +265,7 @@ body {
 		font-size: 50px;
 		line-height:  60px;
 	}
-	.text {
+	.stext {
 		font-size: 14px;
 		line-height: 18px;
 		padding:10px;
@@ -266,7 +294,7 @@ body {
 	#smallObject .sketchfab-embed-wrapper iframe {
 		height:300px;
 	}
-	.text {
+	.stext {
 		display: block;
 		width: 100%;
 		float:none;
@@ -276,6 +304,16 @@ body {
 	}
 	#footer {
 		margin-top: 150px;
+	}
+	.text {
+		padding:0px;
+	}
+
+	#event,#testimonial {
+	    width: 100%;
+	    display: block;
+	    float: center;
+	    margin-bottom: 20px
 	}
 }
 
@@ -293,11 +331,22 @@ body {
 	#footer {
 		margin-top: 50px;
 	}
-	#footer img {
+	#footerImage {
 		display: none;
 	}
 	#footer h1 {
 		padding-top:50px;
+	}
+	.text {
+		font-size: 19px;
+	}
+
+	#footer h1 {
+	    font-size: 60px
+	}
+
+	#footer #events span,#footer #testimonials span {
+	    font-size: 25px
 	}
 }
 
@@ -306,6 +355,9 @@ body {
 		width: 100%;
 		display: block;
 		margin-top: -10px
+	}
+	.text {
+		font-size: 18px;
 	}
 }
 
@@ -319,7 +371,7 @@ body {
 		margin-right: 15px;
 		font-size: 16px;
 	}
-	#logo {
+	#staticLogo {
 		margin-top: 40px;
 	}
 }
@@ -331,5 +383,74 @@ body {
 	}
 	#action span {
 		font-size:14px;
+	}
+}
+
+
+@media (max-width: 414px) {
+	#nav {
+	    width: 80vw;
+	    margin: auto;
+	    text-align: center
+	}
+
+	#nav ul {
+	    margin: 15px 0 10px
+	}
+
+	#nav li {
+	    margin-bottom: 10px
+	}
+
+	#staticLogo {
+	    margin-top: 0
+	}
+
+	#title {
+	    font-size: 25px;
+	    line-height: 30px
+	}
+
+	#action,#content,#events,#staticLogo img,#testimonials {
+	    width: 80vw
+	}
+
+	#action span,.text {
+	    font-size: 17px
+	}
+
+	.text {
+	    padding: 0
+	}
+
+	#video iframe {
+	    width: 80vw;
+	    height: auto
+	}
+
+	#footer h1 {
+	    font-size: 30px
+	}
+
+	#footer p {
+	    margin: 0 0 10px
+	}
+
+	#footer #events span,#footer #testimonials span {
+	    font-size: 15px
+	}
+
+	#social {
+	    margin-top: 90px
+	}
+
+	#footer #social img {
+	    height: 30px
+	}
+
+	#bc img {
+	    width: 200px;
+	    margin-top: 10px;
+	    margin-bottom: 50px
 	}
 }
