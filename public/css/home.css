@@ -131,6 +131,7 @@ body {
 	/*margin-top: 80px;*/
 }
 #glasses {
+	display: none;
 	text-align: center;
 	position: relative;
 	z-index: 20;
